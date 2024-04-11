@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+button {
+  background-color: #3b82f6; /* bg-blue-500 */
+  color: #ffffff; /* text-white */
+  font-weight: bold; /* font-bold */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  border-radius: 9999px; /* rounded-full */
+}
+
+/* Hover state */
+button:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
